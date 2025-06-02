@@ -1,0 +1,10 @@
+﻿User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://b861227candy.github.io/web-writing-service/sitemap.xml
+
+# 不要收錄的檔案
+Disallow: /css/
+Disallow: /js/
+Disallow: /*.git
