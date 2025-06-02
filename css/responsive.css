@@ -1,0 +1,504 @@
+/* ===== 大螢幕到平板的過渡 ===== */
+@media screen and (max-width: 1200px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .nav-menu {
+        gap: 20px;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+    
+    .hero-name {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* ===== 平板樣式 ===== */
+@media screen and (max-width: 1024px) {
+    .hero-profile {
+        gap: 30px;
+    }
+    
+    .profile-image {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+    
+    .hero-name {
+        font-size: 1.6rem;
+    }
+    
+    .section-title {
+        font-size: 1.9rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .portfolio-item {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-image {
+        height: 250px;
+    }
+    
+    .contact-content {
+        gap: 40px;
+    }
+}
+
+/* ===== 小平板/大手機 - 漢堡選單開始顯示 ===== */
+@media screen and (max-width: 900px) {
+    /* 導航列變為漢堡選單 */
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        padding: 20px 0;
+        gap: 0;
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-item {
+        margin: 15px 0;
+    }
+    
+    .nav-link {
+        font-size: 1rem;
+        padding: 10px 20px;
+        display: block;
+    }
+    
+    .contact-btn {
+        margin: 10px auto;
+        display: inline-block;
+    }
+    
+    /* 漢堡選單動畫 */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    /* 主視覺區域調整 */
+    .hero-profile {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+    
+    .profile-image {
+        width: 160px;
+        height: 160px;
+        margin: 0 auto;
+    }
+    
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+    
+    .hero-name {
+        font-size: 1.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    /* 比較表格響應式 */
+    .comparison-table {
+        font-size: 0.9rem;
+    }
+    
+    .comparison-item {
+        padding: 15px 10px;
+    }
+    
+    /* 服務卡片調整 */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .service-card.featured {
+        transform: none;
+    }
+    
+    .service-card.featured:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* ===== 手機樣式 ===== */
+@media screen and (max-width: 768px) {
+    /* 導航列手機版 */
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .nav-logo h2 {
+        font-size: 1.2rem;
+    }
+    
+    /* 主視覺區域 */
+    .hero {
+        padding: 60px 0;
+        min-height: 500px;
+    }
+    
+    .hero h1 {
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+    }
+    
+    .hero-name {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero-highlights {
+        gap: 6px;
+        margin-bottom: 25px;
+    }
+    
+    .highlight-item {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+        width: 200px;
+        text-align: center;
+    }
+    
+    /* 區域調整 */
+    section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 1.7rem;
+        margin-bottom: 35px;
+    }
+    
+    /* 關於我區域 */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .about-card {
+        padding: 25px 20px;
+    }
+    
+    .about-icon {
+        font-size: 3.5rem;
+    }
+    
+    .about-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* 價格比較表格 */
+    .comparison-table {
+        font-size: 0.8rem;
+        margin: 0 10px;
+    }
+    
+    .comparison-header h3,
+    .comparison-item {
+        padding: 12px 8px;
+    }
+    
+    /* 服務項目 */
+    .service-card {
+        padding: 25px 20px;
+    }
+    
+    .service-icon {
+        font-size: 3.2rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .service-features {
+        font-size: 0.9rem;
+    }
+    
+    /* 作品展示 */
+    .portfolio-image {
+        height: 200px;
+    }
+    
+    .portfolio-content {
+        padding: 25px 20px;
+    }
+    
+    .portfolio-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* 價格表 */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .pricing-card {
+        padding: 20px;
+    }
+    
+    .pricing-notes {
+        padding: 25px 20px;
+    }
+    
+    /* 聯絡我 */
+    .contact {
+        padding: 50px 0;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contact-card {
+        padding: 25px 20px;
+    }
+    
+    .contact-icon {
+        font-size: 3rem;
+    }
+    
+    .process-steps {
+        gap: 15px;
+    }
+    
+    .process-step {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    /* 頁尾 */
+    .footer {
+        padding: 40px 0 15px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+}
+
+/* ===== 小手機樣式 ===== */
+@media screen and (max-width: 480px) {
+    .nav-logo h2 {
+        font-size: 1.1rem;
+    }
+    
+    .hero {
+        padding: 40px 0;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-name {
+        font-size: 1.3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .profile-image {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+    
+    .about-card, 
+    .service-card, 
+    .pricing-card {
+        padding: 20px 15px;
+    }
+    
+    .about-icon {
+        font-size: 3rem;
+    }
+    
+    .service-icon {
+        font-size: 2.8rem;
+    }
+    
+    .btn {
+        width: 180px;
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+    
+    .comparison-table {
+        font-size: 0.75rem;
+        margin: 0 5px;
+    }
+    
+    .comparison-header h3,
+    .comparison-item {
+        padding: 10px 5px;
+    }
+    
+    .contact-card {
+        padding: 20px 15px;
+    }
+    
+    .contact-icon {
+        font-size: 2.5rem;
+    }
+    
+    .highlight-item {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+}
+
+/* ===== 超小螢幕 ===== */
+@media screen and (max-width: 320px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .nav-container {
+        padding: 0 10px;
+    }
+    
+    .hero h1 {
+        font-size: 1.3rem;
+    }
+    
+    .hero-name {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .comparison-table {
+        font-size: 0.7rem;
+    }
+    
+    .btn {
+        width: 160px;
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}
+
+/* ===== 橫向手機優化 ===== */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 30px 0;
+        min-height: auto;
+    }
+    
+    .hero-profile {
+        flex-direction: row;
+        gap: 30px;
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-name {
+        font-size: 1.3rem;
+    }
+    
+    .hero-highlights {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .highlight-item {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
